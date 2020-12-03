@@ -2,6 +2,10 @@ const express = require('express')
 const path = require('path')
 const app = express()
 
+app.post('/imgUrl',(req, res)=>{
+   
+})
+
 
 app.use(express.static(path.resolve(__dirname, 'front')))
 

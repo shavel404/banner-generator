@@ -8,6 +8,86 @@
     <title>Генератор баннеров</title>
 </head>
 <body>
+    <div class="container pt-5">
+
+        <div class = "d-flex justify-content-between">
+            <p class="h3">Генератор баннеров</p>
+            <div class="logo-root-bqENt">
+                <a href="https://www.avito.ru/moskva"class="avito"></a>
+            </div>
+        </div>
+       
+        <div id = "set-panel"class = "mt-3">
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">Ширина</span>
+                </div>
+                <input type="number" placeholder="px" aria-label="width" class="form-control">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">Высота</span>
+                </div>
+                <input type="number" placeholder="px" aria-label="height" class="form-control">
+                <div class="dropdown">
+                    <button id = "dropdown-color-btn" class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Заливка
+                    </button>
+                    <div id = "dropdown-color-menu" class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                        <button id = "solid-fill-btn" class="dropdown-item" type="button">Сплошная</button>
+                        <button id = "gradient-fill-btn" class="dropdown-item" type="button">Градиент</button>
+                    </div>
+                </div>
+                <input id = "solid-fill-inp" type="color" value="#00CED1" aria-label="solidFillcolor" class="form-control">
+                <input id = "gradient1-fill-inp" type="color" value="#00CED1" aria-label="grad1Fillcolor" class="form-control">
+                <input id = "gradient2-fill-inp" type="color" value="#EABEC1" aria-label="grad2Fillcolor" class="form-control">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">Цвет текста</span>
+                </div>
+                <input type="color" value="#0000CD" aria-label="textcolor" class="form-control">
+            </div>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                <span class="input-group-text">Ссылка на картинку</span>
+                </div>
+                <input type="url" placeholder="URL или DataURL" aria-label="imgUrl" class="form-control">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">Ссылка баннера</span>
+                </div>
+                <input id="imgUrl" type="url" placeholder="https://www.avito.ru" aria-label="bannerUrl" class="form-control">
+            </div>
+            <div class="input-group">
+                <div class="input-group-prepend">
+                <span class="input-group-text">Текст</span>
+                </div>
+                <textarea rows = 3 class="form-control" aria-label="Text"></textarea>
+            </div>
+        </div>
+
+        <div class = "preview-area mt-5 mb-5">
+            <div class="top-btn">
+                <div class="dropdown">
+                    <button id = "dropdown-export-btn" class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Экспорт
+                    </button>
+                    <div id = "dropdown-color-menu" class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                        <button id = "export-png-btn" class="dropdown-item" type="button">PNG</button>
+                        <button id = "export-html-btn" class="dropdown-item" type="button">HTML код</button>
+                        <button id = "export-json-btn" class="dropdown-item" type="button">JSON строка</button>
+                    </div>
+                </div>
+            </div>
+            <div class="preview-wrap">
+                <div class = "preview">
+
+                </div>
+            </div>
+
+        </div>
+             
+    </div>
+    <script src="js/init-config.js"></script>
+    <script src="js/events.js"></script>
+    <script src="js/fillcolor-menu.js"></script>
+    <script src="js/script.js"></script>
     
 </body>
 </html>

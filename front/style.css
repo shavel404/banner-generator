@@ -1,0 +1,61 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.logo-root-bqENt {
+    position: relative;
+    display: inline-block;
+    width: 105px;
+    height: 30px;
+    z-index: 1;
+}
+
+.avito{
+    position: absolute;
+    top: -16.667%;
+    left: -4.762%;
+    width: 109.524%;
+    height: 133.333%;
+    background: url(https://static.avito.ru/@avito/bx-single-page-main/2.380.0/prod/web/resources/35f5a0d67b53.svg) center/100% auto no-repeat;
+    z-index: -1;
+    text-indent: -9000px;
+}
+
+.preview-area{
+    position: relative;
+    border: 1px solid rgb(114, 161, 180);
+    border-radius: 0.5rem;
+   
+}
+
+.btn{
+    border-radius: 0;
+    border: 1px solid #ced4da;
+    background: #e9ecef;
+    color: #495057;
+  
+}
+
+.preview-area .btn{
+    position: absolute;
+    border-radius: 0.5rem 0 0.5rem 0;
+}
+
+.preview-wrap{
+    display: -ms-flexbox;
+    display: flex;
+    overflow:auto;
+    height: 600px;
+}
+
+.preview{
+    background: grey;
+    border-radius: 0.5rem;
+    margin:auto;
+    height: 400px;
+    width: 400px;
+}
+
+
+
