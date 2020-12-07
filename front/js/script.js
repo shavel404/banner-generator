@@ -1,28 +1,15 @@
-// document.getElementById('getPng').onclick = e=>{
-//     alert(document.getElementById('imgUrl').value)
-// }
+import {config} from '/js/bannerConfig.js'
+import {dropMenuFillColor, dropMenuExport} from '/js/dropMenu.js'
+import {defaultControlsValues, defaultPreview} from '/js/initDefault.js'
+import {setChangeEvents} from '/js/setChangeEvents.js'
+import {savePng} from '/js/export/export-png.js'
+import {saveHtml} from '/js/export/export-html.js'
+import {saveJson} from '/js/export/export-json.js'
 
 
-async function request(url, method = 'GET', data = null){
+defaultControlsValues('set-panel', 'form-control', config)
+defaultPreview(config, 'preview')
+dropMenuFillColor(config, 'preview')
+dropMenuExport(config, savePng, saveHtml, saveJson)
+setChangeEvents(config, 'preview')
 
-    try{
-        const headers = {}
-        let body
-
-        if (data){
-            headers['Content-Type'] = 'application/json'
-            body = JSON.stringify(data)
-        }
- 
-        const response = await fetch(url,{
-            method,
-            headers,
-            body
-        })
-
-        return await response.json()
-
-    }catch(e){
-        console.warn('Error:', e.message)
-    }
-}
